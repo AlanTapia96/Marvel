@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página NO oficial de Marvel">
+    <meta name="keywords" content="Marvel, vengadores, iron man, capitan america, thor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/captain-america-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2e628165bc.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="main-header__a-img"><img class="main-header__img" src="./img/marvel-icon.png"></a>
+            <ul class="main-header__ul">
+                    <li class="main-header__li"><a href="#" class="main-header__a">Inicio</a></li>
+                    <li class="main-header__li"><a href="#personajes" class="main-header__a">Personajes principales</a></li>
+                    <li class="main-header__li"><a href="#films" class="main-header__a">Películas</a></li>
+            </ul>
+            <a href="#" class="hamb"><i class="fas fa-bars"></i></a>
+        </div>
+    </header>
+
+    <main> 
+        <section id="portada">  
+            <img class="portada__img" src="./img/marvel-studios-portada.jpg">  
+            <a href="#" class="saltarina">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <div class="banner">
+               <img class="banner__img" src="img/banner-marvel-1.jpg"> 
+        </div>
+
+        <section id="personajes">
+            <div class="container">
+
+            
+            <div class="personajes__principales">
+                <div  class="h2-center">
+                        <h2 class="titulos"><span class="inicio">P</span>ersonaje<span class="final">s</span><br> principales</h2>
+                </div>
+                <div class="personajes__box">
+                    <div class="personajes__box__contain">
+                        <div class="fila">
+                            <div class="personajes__img">
+                                <a href="#"><img class="main-personajes__tamaño-img"  src="./img/a definir/iron-man.png"></a>
+                            </div>
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/captain-america-icon.png"></a>
+                            </div>
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/a definir/thor.png"></a> 
+                            </div>
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/a definir/groot.png"></a>  
+                            </div>
+                        </div>
+                        <div class="fila fila2">
+
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/spider.png"></a>
+                            </div>
+                            
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/black-panter.png"></a>                              
+                            </div>
+
+                            <div class="personajes__img">
+                                <a href="#"><img class="main-personajes__tamaño-img"  src="./img/hulk-3.png"></a>
+                            </div>
+                            <div class="personajes__img">
+                                <a href=""><img class="main-personajes__tamaño-img" src="./img/thanos.png"></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    </div> 
+             </div>
+                          
+             <div class="form-personajes">
+                <h3>¿Desea recibir más información sobre los personajes?</h3>
+                <h4>Complete el siguiente formulario</h4>
+                    <form action="">
+                        <fieldset class="fieldset-datos-personales">
+                            <legend>Datos personales</legend>
+                            <div>
+                                <label for="name">Nombre</label>
+                                <input id="name" required>
+                            </div>
+                            <div>
+                                <label for="surname">Apellido</label>
+                                <input id="surname" required>
+                            </div>
+      
+                            <div>
+                                <label for="mail">Mail</label>
+                                <input id="mail" type="email" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fieldset-personajes">
+                            <legend>Elija personajes</legend>
+                            <div class="personajes-eleccion">
+                                <div class="division">
+                                    <div>
+                                        <label for="iron-man-form">Iron-Man</label>
+                                        <input type="checkbox"id="iron-man-form">
+                                    </div>
+                                <div>
+                                    <label for="captain-america-form">Capitán américa</label>
+                                    <input type="checkbox"id="captain-america-form">
+                                </div>
+                                <div>
+                                    <label for="thor-form">Thor</label>
+                                    <input type="checkbox"id="thor-form">
+                                </div>
+                                <div>
+                                    <label for="hulk-form">Hulk</label>
+                                    <input type="checkbox"id="iron-man-form">
+                                </div>
+                            </div>
+                            <div class="division">
+                                <div>
+                                    <label for="hombre-araña-form">Hombre araña</label>
+                                    <input type="checkbox"id="hombre-araña-form">
+                                </div>
+                                <div>
+                                    <label for="guard-galaxy-form">Guardianes de la galaxia</label>
+                                    <input type="checkbox"id="guard-galaxy-form">
+                                </div>
+                                <div>
+                                    <label for="black-panter-form">Pantera Negra</label>
+                                    <input type="checkbox"id="black-panter-form">
+                                </div>
+                                <div>
+                                    <label for="thanos-form">Thanos</label>
+                                    <input type="checkbox"id="thanos-form">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <button class="button">Enviar</button> <!-- type="submit" value="Enviar" class="button"> -->
+                        </div>
+                        
+                        
+
+                    </form>
+                </div>
+            
+            </div>
+        </div>
+        </section>
+        
+             
+        
+        <div class="banner">
+            <img class="banner__img" src="img/banner-avengers-inf.jpg"> 
+        </div> 
+
+         <section id="films"> 
+             <div class="container">
+                <div  class="h2-center">
+                    <h2 class="titulos"><span class="inicio">P</span>elicula<span class="final">s</span></h2>
+                </div>
+                <div class="films__grid">
+                    <div><img src="img/iron-man-1-film.png"></div>
+                    <div><img src="img/iron-man-2-film.png"></div>
+                    <div><img src="img/iron-man-3-film.jpg"></div>
+                    <div><img src="img/thor-1-film.jpg"></div>
+                    <div><img src="img/thor-2-film.jpg"></div>
+                    <div><img src="img/thor-3-film.jpg"></div>
+                    <div><img src="img/capitan-america-1.jpg"></div>
+                    <div><img src="img/capitan-america-2.jpg"></div>
+                    <div><img src="img/capitan-america-3.jpg"></div>
+
+                </div>
+            </div>
+           
+
+
+         </section>
+  
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__p">&reg; Página no oficial de Marvel 2021</p>
+            <ul class="footer__ul">
+                <li><a href="https://www.facebook.com/MarvelLatinoamerica" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/marvel/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.twitter.com/marvel" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            
+        </div>
+    </footer>
+</body>
+</html>
