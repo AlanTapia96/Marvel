@@ -525,11 +525,11 @@ h2{
 
 
 
-@media (max-width:768px){
+/* @media (max-width:768px){
     .films__grid{
         grid-auto-rows: 20em;
     }
-}
+} */
 
 
 @media (max-width: 1199px)
@@ -581,7 +581,6 @@ h2{
         display: grid;
         padding-top: 4em;
         grid-template-columns: repeat(3,1fr);
-        height:100vh;
         /* grid-auto-rows: 54em; */
         row-gap: 3em;
         column-gap: .2em;
@@ -627,6 +626,13 @@ h2{
         
     }
 
+    #portada{
+        height: 60vh;
+    }
+
+    .portada__img{
+        object-fit: contain;
+    }
 
     .main-header .container img{
         width: 6.5em;
@@ -658,15 +664,16 @@ h2{
 
     
     .saltarina{
-        font-size: 1.5em;
+        /* font-size: 1.5em;
         position: absolute;
         color: white;
-        bottom: 4em;
+        bottom: 4em; */
+        display: none;
     }
 
     
     #portada{
-        height: 78vh;
+        height: 65vh;
     }
 
     .portada__img{  
