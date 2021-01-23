@@ -67,9 +67,6 @@ html{
     display:none;
 }
 
-
-
-
 .saltarina{
     width: 1.5em;
     height: 1.5em;
@@ -108,7 +105,7 @@ html{
 
 .banner{
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     position: relative;
     border: 1px solid black;
    
@@ -136,6 +133,7 @@ html{
     width: 100%;
     height: 100vh;
     position: relative;
+    top: .9em;
 }
 
 .portada__img{  
@@ -451,7 +449,7 @@ h2{
     display: grid;
     padding-top: 4em;
     grid-template-columns: repeat(3,minmax(15em,1fr));
-    /* grid-auto-rows: 54em; */
+    grid-auto-rows: auto;
     row-gap: 3em;
     column-gap: .2em;
 
@@ -537,7 +535,11 @@ h2{
 	.container
 	{
 		width: 960px;
-	}
+    }
+    
+    .banner{
+        height: 23vh;   
+    }
     
     .personajes__box__contain{
         width: 50vw;
@@ -558,7 +560,6 @@ h2{
         width: 50vw;
         margin-top: 1.5em;
     }
-
 
 
     .fieldset-datos-personales input {
@@ -607,14 +608,8 @@ h2{
         width: 100%;
     }
 
-
-
     .main-header .container{
-        width: 100%;
         height: 3.8em;
-        position: relative;
-        top: 0;
-        left: 0;
         align-items: center;
     }
 
@@ -627,7 +622,7 @@ h2{
     }
 
     #portada{
-        height: 60vh;
+        height: 85vh;
     }
 
     .portada__img{
@@ -638,7 +633,6 @@ h2{
         width: 6.5em;
         height: 3.2em;
     }
-    
 
     .main-header ul{
         flex-direction: column;
@@ -647,44 +641,17 @@ h2{
 	    transform: translateX(100%); /*lo traslada un 100% de su tamaño para afuera*/
     }
 
-    .main-header ul.open{
-        transform: translateX(0);
-    }
-
-    #first-img{
-        height: 75vh;
-        position: relative
-    }
-
-    .main__back-img{  
-        width: 100%; 
-        height: 100%;
-        object-fit: cover;
-    }
-
-    
     .saltarina{
-        /* font-size: 1.5em;
-        position: absolute;
-        color: white;
-        bottom: 4em; */
         display: none;
     }
 
-    
-    #portada{
-        height: 65vh;
-    }
-
     .portada__img{  
-
         object-fit: cover;
-
     }
 
 
     .banner{
-        height: 23vh;
+        height: 15vh;
     }
     
     
@@ -712,7 +679,7 @@ h2{
         margin: 0 4em;
         padding-top: 4em;
         grid-template-columns: repeat(1,1fr);
-        grid-auto-rows: 70vh;
+        grid-auto-rows: auto;
         row-gap: 1em;
         column-gap: .1em;
     
@@ -767,11 +734,18 @@ h2{
     .footer__ul > li{
         padding: 1em;
     }
-
-
 }
 
+
 @media (max-width: 570px){
+
+    #portada{
+        height: 75vh;
+    }
+
+    .banner{
+        height: 13vh;
+    }
 
     .personajes__img{
         padding: .4em;
@@ -780,7 +754,4 @@ h2{
     .personajes-eleccion{
         flex-direction: column;
     }
-
-
-
 }
