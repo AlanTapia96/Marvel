@@ -16,32 +16,32 @@
 </head>
 <body> 
     
-    <header class="main-header">
-        <div class="container header">
-            <a href="#" class="main-header__a-img"><img class="main-header__img" src="./img/marvel-icon.png"></a>
-            <ul class="main-header__ul">
-                    <li class="main-header__li"><a href="#" class="main-header__a">Inicio</a></li>
-                    <li class="main-header__li"><a href="#personajes" class="main-header__a">Personajes principales</a></li>
-                    <li class="main-header__li"><a href="#films" class="main-header__a">Películas</a></li>
-            </ul>
-            <button class="panel-btn hamburger hamburger--vortex" id="hamb" type="button">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
+    <header class="header">
+        <nav class="nav">
+                <a href="#" class="header__a-img"><img class="header__img" src="./img/marvel-icon.png"></a>
+                <button class="panel-btn hamburger hamburger--collapse" id="hamb" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-menu-item"><a href="#personajes" class="nav-link">Personajes principales</a></li>
+                    <li class="nav-menu-item"><a href="#films" class="nav-link">Películas</a></li>
+                </ul>
+        </nav>
     </header>
 
 
     <main> 
         <section id="portada">  
             <img class="portada__img" src="./img/marvel-studios-portada.jpg">  
-            <a href="#" class="saltarina">
+            <a href="#banner" class="saltarina">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </section>
 
-        <div class="banner">
+        <div class="banner" id="banner">
                <img class="banner__img" src="img/banner-marvel-1.jpg"> 
         </div>
 
@@ -55,45 +55,43 @@
                             <div class="personajes__box__contain">
                                 <div class="fila">
                                     <div class="personajes__img">
-                                        <a href="#"><img class="main-personajes__tamaño-img"  src="./img/a definir/iron-man.png"></a>
+                                        <img class="main-personajes__tamaño-img"  src="./img/a definir/iron-man.png">
                                     </div>
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/captain-america-icon.png"></a>
+                                        <img class="main-personajes__tamaño-img" src="./img/captain-america-icon.png">
                                     </div>
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/a definir/thor.png"></a> 
+                                        <img class="main-personajes__tamaño-img" src="./img/a definir/thor.png"> 
                                     </div>
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/a definir/groot.png"></a>  
+                                        <img class="main-personajes__tamaño-img" src="./img/a definir/groot.png">  
                                     </div>
                                 </div>
                                 <div class="fila fila2">
 
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/spider.png"></a>
+                                        <img class="main-personajes__tamaño-img" src="./img/spider.png">
                                     </div>
                                     
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/black-panter.png"></a>                              
+                                        <img class="main-personajes__tamaño-img" src="./img/black-panter.png">                             
                                     </div>
 
                                     <div class="personajes__img">
-                                        <a href="#"><img class="main-personajes__tamaño-img"  src="./img/hulk-3.png"></a>
+                                        <img class="main-personajes__tamaño-img"  src="./img/hulk-3.png">
                                     </div>
                                     <div class="personajes__img">
-                                        <a href=""><img class="main-personajes__tamaño-img" src="./img/thanos.png"></a>
-                                        
+                                        <img class="main-personajes__tamaño-img" src="./img/thanos.png">
                                     </div>
                                 </div>
                             </div>
-
                         </div> 
                 </div>
                             
                 <div class="form-personajes">
                     <h3>¿Desea recibir más información sobre los personajes?</h3>
                     <h4>Complete el siguiente formulario</h4>
-                        <form action="">
+                        <form>
                             <fieldset class="fieldset-datos-personales">
                                 <legend>Datos personales</legend>
                                 <div>
@@ -117,37 +115,37 @@
                                     <div class="division">
                                         <div>
                                             <label for="iron-man-form">Iron-Man</label>
-                                            <input type="checkbox"id="iron-man-form">
+                                            <input type="checkbox"id="iron-man-form" value="Iron Man">
                                         </div>
                                     <div>
                                         <label for="captain-america-form">Capitán américa</label>
-                                        <input type="checkbox"id="captain-america-form">
+                                        <input type="checkbox"id="captain-america-form" Value="Capitán américa">
                                     </div>
                                     <div>
                                         <label for="thor-form">Thor</label>
-                                        <input type="checkbox"id="thor-form">
+                                        <input type="checkbox"id="thor-form" value="Thor">
                                     </div>
                                     <div>
                                         <label for="hulk-form">Hulk</label>
-                                        <input type="checkbox"id="iron-man-form">
+                                        <input type="checkbox"id="iron-man-form" value="Hulk">
                                     </div>
                                 </div>
                                 <div class="division">
                                     <div>
                                         <label for="hombre-araña-form">Hombre araña</label>
-                                        <input type="checkbox"id="hombre-araña-form">
+                                        <input type="checkbox"id="hombre-araña-form" value="Hombre araña">
                                     </div>
                                     <div>
                                         <label for="guard-galaxy-form">Guardianes de la galaxia</label>
-                                        <input type="checkbox"id="guard-galaxy-form">
+                                        <input type="checkbox"id="guard-galaxy-form" value="Guardians de la galaxia">
                                     </div>
                                     <div>
                                         <label for="black-panter-form">Pantera Negra</label>
-                                        <input type="checkbox"id="black-panter-form">
+                                        <input type="checkbox"id="black-panter-form" value="Pantera negra">
                                     </div>
                                     <div>
                                         <label for="thanos-form">Thanos</label>
-                                        <input type="checkbox"id="thanos-form">
+                                        <input type="checkbox"id="thanos-form" value="Thanos">
                                     </div>
                                 </div>
                             </fieldset>

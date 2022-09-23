@@ -12,46 +12,40 @@ html{
 	margin: 0 auto;
 }
 
-
-.main-header .container
-{
-
-    display: flex;
-    position: relative;
-	align-items: center;
-    justify-content: space-between;
-}
-
-
-.main-header{
+.header{
     position: fixed;
     top:0;
-    z-index: 200;
+    left: 0;
     background-color: rgb(226,0,26);
     box-shadow: .1rem .1rem 2rem 0px rgb(71, 69, 69);
     transition-duration: 1s;
     width: 100%;
+    height: 4rem;
+    z-index: 999;
 }
 
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
 
-.main-header__img{
+.header__img{
     width: 10em;
     height: 100%;
     vertical-align: middle;    
 }
 
-.main-header__ul{
+.nav-menu{
     display: flex;
     list-style: none;
-    
 }
 
-.main-header__li{
-    margin-left: .8em;  
-}
-
-
-.main-header__a{
+.nav-link{
     text-decoration: none;
     font-size: 1.2em;
     margin-left: 1.5em;
@@ -60,16 +54,14 @@ html{
     line-height: 1em;
 }
 
-.main-header__a:hover{
+.nav-link:hover{
     color: lightgray;
 }
 
-
 .panel-btn{
     display: none;
-     position: fixed;
+    position: fixed;
     right: 1vw;
-    /* bottom: 1vh; */
     z-index: 2000;
     width: 4rem;
     height: 4rem;
@@ -82,15 +74,15 @@ html{
 
 .hamburger{
     display: none!important;
-    color: white!important;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before{
+    background-color: white !important;
 }
 
 .header.is-active{
     transform: translate(0,0);
 }
-
-
-
 
 .saltarina{
     width: 1.5em;
@@ -132,21 +124,22 @@ html{
     width: 100%;
     height: 40vh;
     position: relative;
-    border: 1px solid black;
-   
+    cursor: pointer;
+    /* border: 1px solid black; */
 }
 
 .banner__img {
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 102%;
     position: absolute;
     display: block;
     top:0;
+    left: 0;
     object-fit: cover;
     object-position: top;
     display: block;
     filter: grayscale(.6);
-    transition: filter 1s ease;
+    transition: all 1s ease-out;
 }
 
 
@@ -333,7 +326,7 @@ h2{
 }
 
 .main-personajes__tamaño-img:hover{
-    -webkit-transform:scale(0.4);transform:scale(1.3);
+    transform:scale(0.4);transform:scale(1.3);
 }
 
 
@@ -375,7 +368,6 @@ h2{
 
 .fieldset-personajes{
     position: relative;
-    /* display: inline-block; */
     margin-top: .8em;
     margin-bottom: .8em;
     padding: 0.5em 4em 1em 2em;    
@@ -420,9 +412,6 @@ h2{
     align-items: flex-start;
     margin-right: 1em;
 }
-
-
-
 
 .personajes-eleccion label{
     display: inline-block;
@@ -494,7 +483,7 @@ h2{
 #films img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 
@@ -629,12 +618,6 @@ h2{
         width: 100%;
     }
 
-    .main-header .container{
-        height: 3.8em;
-        align-items: center;
-    }
-
-
     #portada{
         height: 85vh;
     }
@@ -643,35 +626,42 @@ h2{
         object-fit: contain;
     }
 
-    .main-header .container img{
+    .header img{
         width: 6.5em;
         height: 3.2em;
     }
-
-    .main-header ul{
-        /* margin-left: 2em; */
-        background-color: #2e2f3a;
-        flex-direction: column;
+    
+    .nav-menu{
+        position: fixed;
+        top: 4rem;
         width: 100%;
-        /* height: 25vh; */
-        margin: auto;
-        /* display: none; */
-        transition: all 0.4s ease;
-	    transform: translate(0,-100%); /*lo traslada un 100% de su tamaño para afuera*/
+        background-color: rgb(226,0,26);
+        flex-direction: column;
+        transition: all .5s ease;
+        align-items: center;
+        left: 100%;
     }
 
-    .main-header ul li{
-        margin-top: 1em;
+    .nav-menu-item{
+        margin: .8em 0;
         font-size: 2em;
-        margin-bottom: 1em;
     }
 
-    .main-header ul.is-active{
-        transform:translate(0,0);
+    .nav-link{
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    .is-active{
+        display: block;
+    }
+
+    .nav-menu_invisible{
+        left: 0;
     }
 
     .hamburger{
-        display:flex!important;
+        display:inline-block!important;
     }
 
     .saltarina{
@@ -709,7 +699,7 @@ h2{
 
     .films__grid{
         display: grid;
-        margin: 0 4em;
+        /* margin: 0 4em; */
         padding-top: 4em;
         grid-template-columns: repeat(1,1fr);
         /* grid-auto-rows: auto; */
@@ -780,8 +770,24 @@ h2{
         height: 13vh;
     }
 
+    .titulos{
+        font-size: 2rem;
+    }
+
+    .form-personajes{
+        padding: 1.5em;
+    }
+    
     .personajes__img{
-        padding: .4em;
+        margin: 0.2em;
+    }
+
+    .form-personajes h3{
+        font-size: 1.5rem;
+    }
+
+    .personajes__img{
+        padding: 0;
     }
 
     .personajes-eleccion{
@@ -799,9 +805,9 @@ h2{
     }
     
     
-    #films img{
+    /* #films img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; */
    
 }
