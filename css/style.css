@@ -1,0 +1,813 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Roboto', sans-serif; /* fijarse bien esto, no definir letra acá */
+}
+
+.container{
+    width: 85.74%; /*versión deckstop*/
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgb(226,0,26);
+    box-shadow: .1rem .1rem 2rem 0px rgb(71, 69, 69);
+    transition-duration: 1s;
+    width: 100%;
+    height: 4rem;
+    z-index: 999;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header__img{
+    width: 10em;
+    height: 100%;
+    vertical-align: middle;    
+}
+
+.nav-menu{
+    display: flex;
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 1.5em;
+    color: white;
+    text-align: center;
+    line-height: 1em;
+}
+
+.nav-link:hover{
+    color: lightgray;
+}
+
+.panel-btn{
+    display: none;
+    position: fixed;
+    right: 1vw;
+    z-index: 2000;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    
+    justify-content: center;
+    align-items: center; 
+}
+
+.hamburger{
+    display: none!important;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before{
+    background-color: white !important;
+}
+
+.header.is-active{
+    transform: translate(0,0);
+}
+
+.saltarina{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    font-size: 1.6em;
+    border: .1em solid white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: white;
+    animation-name: saltar;
+    animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+
+@keyframes saltar
+{
+	0%{bottom: 2rem;}
+	50%{bottom: 4rem;}
+	100%{bottom: 2rem;}
+}
+
+
+.stan-lee__container{
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+.banner{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+
+.banner__img {
+    width: 101%;
+    height: 102%;
+    position: absolute;
+    display: block;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: grayscale(.6);
+    transition: all 1s ease-out;
+}
+
+
+.banner__img:hover{
+    filter: grayscale(.1);
+}
+
+
+#portada{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: .9em;
+}
+
+.portada__img{  
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+
+
+/********Títulos********/
+
+
+.h2-center{
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+
+
+h2{
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    display: inline-block;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    /* border-bottom: 3px solid  #0c1d40; */
+    transition: all 2s ease;
+    
+}
+
+
+.inicio::before
+{
+	position: absolute;
+	top: -.5rem;
+	width: .9em;
+	height: 0.12rem;
+	background-color:  #2e2f3a;
+	content: " ";
+}
+
+.final::before{
+    position: absolute;
+	bottom: -.3rem;
+    width: .9em;
+	margin-left: -0.9rem; 
+	height: 0.10rem;
+	background-color:  #2e2f3a;
+    content: " ";    
+}
+
+
+
+.inicio::after
+{
+	position: absolute;
+	width: .05em;
+    height: 100%;
+    margin-left: -3rem;
+	background-color:  #2e2f3a;
+	content: " ";
+} 
+
+
+
+.final::after
+{
+	position: absolute;
+	width: .05em;
+	margin-left: .3em;
+	height: 100%;
+	background-color:  #2e2f3a;
+	content: " ";
+}
+
+
+
+
+/********************************/
+
+
+#personajes{
+    width: 100%;
+    padding-bottom: 5em;
+    padding-top: 5em;
+    background-image: radial-gradient(circle,rgba(59, 61, 70, 0.8),rgba(3, 7, 29, 0.8));
+
+}
+
+#personajes .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.personajes__principales{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.personajes__box{
+    margin-top: 1.5em;
+    padding-top: 3em; 
+    margin-right: auto;
+    margin-left: auto;  
+    
+}
+
+.personajes__box__contain{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #100a4b;
+    box-shadow: 3px 5px 9px 0px rgba(16, 18, 37, 0.8);
+    padding: 2em;
+    background-color: rgba(69, 70, 77, 0.8);
+    
+}
+
+
+.fila,.fila2{
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    }
+
+.fila1{
+    padding-left: .2em;
+}
+
+.fila2{
+    margin-top: 2em;
+}
+
+
+
+
+.personajes__img{
+    position: relative;
+    display: inline;
+    margin: .5em; 
+    padding: .4em; 
+    width: 5em;
+    height: 6em;
+    
+}
+
+
+.main-personajes__tamaño-img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease; 
+    margin: 0;
+    
+}
+
+.main-personajes__tamaño-img:hover{
+    transform:scale(0.4);transform:scale(1.3);
+}
+
+
+#personajes .form-personajes{
+    display: flex;
+    align-content: space-between;
+    position: relative;
+    flex-direction: column;
+    width: 40%;
+    padding: 2.5em;
+    border: 1px solid #100a4b;
+    box-shadow: 3px 5px 9px 0px rgba(16, 18, 37, 0.8);
+    background-color: rgba(72, 73, 78, 0.8);
+    color: rgb(209, 207, 207);
+}
+
+.form-personajes h3{
+    color: white;
+    text-align: center;
+    padding: .5em;
+    font-size: 2em;
+
+}
+
+.form-personajes h4{
+    margin-top: .6em;
+    margin-bottom: .6em;
+    text-align: center;
+
+}
+
+.fieldset-datos-personales{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0.5em 4em 1em 2em;
+}
+
+.fieldset-personajes{
+    position: relative;
+    margin-top: .8em;
+    margin-bottom: .8em;
+    padding: 0.5em 4em 1em 2em;    
+}
+
+.fieldset-datos-personales div{
+    display: block;
+    width: 100%;
+    margin: .15em;
+}
+
+.fieldset-datos-personales input{
+    position: relative;
+    display: block;    
+    width: 100%;
+   
+}
+
+.fieldset-datos-personales label{
+    display: inline;    
+}
+
+
+
+.personajes-eleccion{
+    width: 100%;
+    display: flex;
+    /* position: relative; */
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+
+.division{
+    margin-bottom: 1em;
+}
+
+.division div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 1em;
+}
+
+.personajes-eleccion label{
+    display: inline-block;
+    margin-top: .2em;
+    width: 100%;
+}
+
+.personajes-eleccion input{
+    position: relative;
+    display: inline;
+    margin-left: .5em;
+    margin-top: 0.3em;
+}
+
+.personajes-eleccion > div:first-child{
+    margin-right:1em;
+}
+
+
+.button{
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid rgb(209, 207, 207);
+    color: rgb(209, 207, 207);;
+    margin-top: .2em;
+    padding: .5em;
+    font-weight: bold;
+    transition: all .4s;
+}
+
+.button:hover{
+    background-color:rgb(209, 207, 207);
+    color: rgba(51, 52, 56, 0.8);
+}
+
+
+#films{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: rgb(11, 74, 104); 
+}
+
+
+
+.films__grid{
+    display: grid;
+    padding-top: 4em;
+    grid-template-columns: repeat(3,minmax(15em,1fr));
+    /* grid-auto-rows: auto; */
+    row-gap: 3em;
+    column-gap: .2em;
+
+}
+
+
+.films__grid div{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px 0px rgba(113, 113, 121, 0.8);
+
+}
+
+#films img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+#form-section{
+    background-color: rgba(6, 24, 65,0.98);
+    position: relative; 
+    top: 100vh;
+    height: 50vh;
+    width: 100%;
+}
+
+
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(226,0,26); 
+    
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__p{
+    font-size: 1.3em;
+    color: white;
+}
+
+.footer a {
+    color:white;
+}
+
+.footer a:hover{
+    color: rgb(20, 13, 112);
+}
+
+.footer__ul{
+    display: flex;
+    list-style: none;
+}
+
+.footer__ul > li{
+    padding: 1em;
+}
+
+
+
+@media (max-width: 1199px)
+{
+
+    
+
+	.container
+	{
+		width: 960px;
+    }
+    
+    .banner{
+        height: 23vh;   
+    }
+    
+    .personajes__box__contain{
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #personajes .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #personajes .form-personajes{
+        position: relative;
+        width: 50vw;
+        margin-top: 1.5em;
+    }
+
+
+    .fieldset-datos-personales input {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+
+    .fieldset-datos-personales {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .films__grid {
+        display: grid;
+        padding-top: 4em;
+        grid-template-columns: repeat(3,1fr);
+        /* grid-auto-rows: 54em; */
+        row-gap: 3em;
+        column-gap: .2em;
+    }
+
+    
+
+}
+
+
+@media (max-width: 991px)
+{
+
+	.container
+	{
+		width: 750px;
+	}
+	
+}
+
+@media (max-width: 767px){
+
+    .container{
+        width: 100%;
+    }
+
+    #portada{
+        height: 85vh;
+    }
+
+    .portada__img{
+        object-fit: contain;
+    }
+
+    .header img{
+        width: 6.5em;
+        height: 3.2em;
+    }
+    
+    .nav-menu{
+        position: fixed;
+        top: 4rem;
+        width: 100%;
+        background-color: rgb(226,0,26);
+        flex-direction: column;
+        transition: all .5s ease;
+        align-items: center;
+        left: 100%;
+    }
+
+    .nav-menu-item{
+        margin: .8em 0;
+        font-size: 2em;
+    }
+
+    .nav-link{
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    .is-active{
+        display: block;
+    }
+
+    .nav-menu_invisible{
+        left: 0;
+    }
+
+    .hamburger{
+        display:inline-block!important;
+    }
+
+    .saltarina{
+        display: none;
+    }
+
+    .portada__img{  
+        object-fit: cover;
+    }
+
+
+    .banner{
+        height: 15vh;
+    }
+    
+    
+    .personajes__img{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        
+    }
+    
+    .fieldset-datos-personales{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .fieldset-personajes{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+
+
+    .films__grid{
+        display: grid;
+        /* margin: 0 4em; */
+        padding-top: 4em;
+        grid-template-columns: repeat(1,1fr);
+        /* grid-auto-rows: auto; */
+        row-gap: 1em;
+        column-gap: .1em;
+    
+    }
+
+    .division{
+        width: 100%;
+    }
+
+    .personajes__box__contain{
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #personajes .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #personajes .form-personajes{
+        position: relative;
+        width: 70vw;
+        margin-top: 1.5em;
+    }
+
+
+    
+    .footer__p{
+        font-size: .9em;
+        color: white;
+    }
+    
+    .footer a {
+        color:white;
+    }
+    
+    .footer a:hover{
+        color: rgb(20, 13, 112);
+    }
+    
+    .footer__ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        margin-left: 1em;
+    }
+    
+    .footer__ul > li{
+        padding: 1em;
+    }
+}
+
+
+@media (max-width: 570px){
+
+    #portada{
+        height: 75vh;
+    }
+
+    .banner{
+        height: 13vh;
+    }
+
+    .titulos{
+        font-size: 2rem;
+    }
+
+    .form-personajes{
+        padding: 1.5em;
+    }
+    
+    .personajes__img{
+        margin: 0.2em;
+    }
+
+    .form-personajes h3{
+        font-size: 1.5rem;
+    }
+
+    .personajes__img{
+        padding: 0;
+    }
+
+    .personajes-eleccion{
+        flex-direction: column;
+    }
+
+     .films__grid{
+        display: grid;
+        padding-top: 4em;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        grid-auto-rows: 35em; 
+        row-gap: 3em;
+        column-gap: .2em;
+    
+    }
+    
+    
+    /* #films img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; */
+   
+}
